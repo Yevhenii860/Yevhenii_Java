@@ -3,20 +3,24 @@ public class Main {
         System.out.println("Hello world!");
     }
 }import java.util.Scanner;
-public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        int h = sc.nextInt();
 
-        int r = h - b;
-        int f = a - b;
-        int result = (r+f-1) / f;
-        if (result <0) {
-            System.out.println ("Impossible");
-        }else {
-            System.out.println (result);
+public class dutty {
+    public dutty() {
+    }
+
+    public static void main(String[] args) {
+        Scanner scann = new Scanner(System.in);
+        int sum = scann.nextInt();
+        int mans = scann.nextInt();
+        if (sum <= 0) {
+            System.out.println("Bill total amount cannot be negative");
+        } else if (mans <= 0) {
+            System.out.println("Number of friends cannot be negative or zero");
+        } else {
+            int oneSum = sum / mans;
+            System.out.println(oneSum + oneSum / 100 * 10);
         }
+
+        scann.close();
     }
 }
